@@ -7,27 +7,28 @@ services:
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
-        scope: all
+        value: "set-in-dashboard"
       - key: REDIS_URL
-        scope: all
+        value: "set-in-dashboard"
       - key: S3_ENDPOINT
-        scope: all
+        value: "https://s3.eu-central-003.backblazeb2.com"
       - key: S3_REGION
-        scope: all
+        value: "eu-central-003"
       - key: S3_BUCKET
-        scope: all
+        value: "visual-monitor-bucket"
       - key: AWS_ACCESS_KEY_ID
-        scope: all
+        value: "set-in-dashboard"
       - key: AWS_SECRET_ACCESS_KEY
-        scope: all
+        value: "set-in-dashboard"
       - key: SENDGRID_API_KEY
-        scope: all
+        value: "set-in-dashboard"
       - key: EMAIL_FROM
-        scope: all
+        value: "notifications@example.com"
       - key: JWT_SECRET
-        scope: all
+        value: "change-me-to-a-long-random-string"
       - key: NEXT_PUBLIC_BASE_URL
-        scope: all
+        value: "https://your-render-web-url.onrender.com"
+
   - type: worker
     name: visual-monitor-worker
     env: docker
@@ -36,24 +37,24 @@ services:
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
-        scope: all
+        value: "set-in-dashboard"
       - key: REDIS_URL
-        scope: all
+        value: "set-in-dashboard"
       - key: S3_ENDPOINT
-        scope: all
+        value: "https://s3.eu-central-003.backblazeb2.com"
       - key: S3_REGION
-        scope: all
+        value: "eu-central-003"
       - key: S3_BUCKET
-        scope: all
+        value: "visual-monitor-bucket"
       - key: AWS_ACCESS_KEY_ID
-        scope: all
+        value: "set-in-dashboard"
       - key: AWS_SECRET_ACCESS_KEY
-        scope: all
+        value: "set-in-dashboard"
       - key: SENDGRID_API_KEY
-        scope: all
+        value: "set-in-dashboard"
       - key: EMAIL_FROM
-        scope: all
+        value: "notifications@example.com"
       - key: JWT_SECRET
-        scope: all
+        value: "change-me-to-a-long-random-string"
       - key: TEST_URL
-        scope: all
+        value: "https://example.com"

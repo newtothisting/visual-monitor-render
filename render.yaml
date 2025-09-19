@@ -3,6 +3,7 @@ services:
     name: visual-monitor-web
     env: docker
     dockerfilePath: app/Dockerfile
+    dockerContext: ./app          # ✅ add this
     plan: free
     autoDeploy: true
     envVars:
@@ -33,6 +34,7 @@ services:
     name: visual-monitor-worker
     env: docker
     dockerfilePath: worker/Dockerfile
+    dockerContext: ./worker       # ✅ add this
     plan: free
     autoDeploy: true
     envVars:

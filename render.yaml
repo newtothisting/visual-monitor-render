@@ -5,7 +5,6 @@ services:
     dockerfilePath: app/Dockerfile
     plan: free
     autoDeploy: true
-    instanceType: starter
     envVars:
       - key: DATABASE_URL
         scope: all

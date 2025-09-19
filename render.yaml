@@ -1,0 +1,61 @@
+services:
+  - type: web
+    name: visual-monitor-web
+    env: docker
+    dockerfilePath: app/Dockerfile
+    plan: free
+    autoDeploy: true
+    instanceType: starter
+    envVars:
+      - key: DATABASE_URL
+        scope: all
+      - key: REDIS_URL
+        scope: all
+      - key: S3_ENDPOINT
+        scope: all
+      - key: S3_REGION
+        scope: all
+      - key: S3_BUCKET
+        scope: all
+      - key: AWS_ACCESS_KEY_ID
+        scope: all
+      - key: AWS_SECRET_ACCESS_KEY
+        scope: all
+      - key: SENDGRID_API_KEY
+        scope: all
+      - key: EMAIL_FROM
+        scope: all
+      - key: JWT_SECRET
+        scope: all
+      - key: NEXT_PUBLIC_BASE_URL
+        scope: all
+  - type: worker
+    name: visual-monitor-worker
+    env: docker
+    dockerfilePath: worker/Dockerfile
+    plan: free
+    autoDeploy: true
+    instanceType: starter
+    envVars:
+      - key: DATABASE_URL
+        scope: all
+      - key: REDIS_URL
+        scope: all
+      - key: S3_ENDPOINT
+        scope: all
+      - key: S3_REGION
+        scope: all
+      - key: S3_BUCKET
+        scope: all
+      - key: AWS_ACCESS_KEY_ID
+        scope: all
+      - key: AWS_SECRET_ACCESS_KEY
+        scope: all
+      - key: SENDGRID_API_KEY
+        scope: all
+      - key: EMAIL_FROM
+        scope: all
+      - key: JWT_SECRET
+        scope: all
+      - key: TEST_URL
+        scope: all
